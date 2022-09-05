@@ -27,7 +27,7 @@ def start(fname):
 
                 for segment in event[
                         'chat_message']['message_content']['segment']:
-                    if segment['type'] == 'TEXT':
+                    if segment['type'] == 'TEXT' or segment['type'] == 'LINK':
                         text.append(segment['text'])
                         
                 sender = participants.get(
